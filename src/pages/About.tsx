@@ -29,7 +29,7 @@ const About = () => {
             </div>
             <div className="neon-border">
               <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=800&q=80" 
                 alt="AI Team Collaboration" 
                 className="rounded-xl shadow-lg"
               />
@@ -86,25 +86,25 @@ const team = [
     name: "Alex Chen",
     role: "CEO & Founder",
     description: "AI visionary with 15+ years in the industry",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80"
   },
   {
     name: "Sophia Rodriguez",
     role: "Chief Data Scientist",
     description: "PhD in Machine Learning from Stanford",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80"
   },
   {
     name: "Michael Kim",
     role: "CTO",
     description: "Former tech lead at Google AI",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80"
   },
   {
     name: "Priya Sharma",
     role: "Head of Research",
     description: "Leading our NLP and computer vision teams",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    image: "https://images.unsplash.com/photo-1535468850893-d6e543fbd7f5?auto=format&fit=crop&w=300&q=80"
   }
 ];
 

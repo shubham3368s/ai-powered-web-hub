@@ -9,6 +9,11 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+        <img 
+          src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=2000&q=80" 
+          alt="Background" 
+          className="absolute inset-0 w-full h-full object-cover opacity-10 z-[-1]" 
+        />
       </div>
       
       <div className="container mx-auto px-4">
@@ -46,6 +51,11 @@ const Hero = () => {
             <div className="relative neon-border">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl blur-3xl"></div>
               <div className="relative glass-card p-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80" 
+                  alt="AI Technology" 
+                  className="w-full h-auto rounded-lg mb-6 opacity-90" 
+                />
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     { title: "AI Analysis", desc: "Real-time data insights", icon: <Circle className="w-5 h-5" /> },

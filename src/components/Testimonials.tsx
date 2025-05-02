@@ -6,21 +6,21 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     role: "Marketing Director, TechGrowth",
-    image: "/placeholder.svg",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
     content: "The AI-powered content generation has revolutionized our marketing strategy. We've seen a 40% increase in engagement and saved countless hours on content creation.",
     rating: 5
   },
   {
     name: "Michael Chen",
     role: "CTO, DataFlow Systems",
-    image: "/placeholder.svg",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
     content: "Implementing the predictive analytics service has given us insights we never thought possible. Our forecast accuracy improved by 65% in just three months.",
     rating: 5
   },
   {
     name: "Emma Rodriguez",
     role: "Operations Manager, Global Solutions",
-    image: "/placeholder.svg",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80",
     content: "The intelligent automation tools have streamlined our workflows beyond expectation. What used to take days now happens in minutes with greater accuracy.",
     rating: 4
   }
