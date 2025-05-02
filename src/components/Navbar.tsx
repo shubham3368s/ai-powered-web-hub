@@ -23,16 +23,20 @@ const Navbar = () => {
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/#features" className="text-sm font-medium hover:text-primary transition-colors">Services</Link>
+            <Link to="/services" className="text-sm font-medium hover:text-primary transition-colors">Services</Link>
             <Link to="/#pricing" className="text-sm font-medium hover:text-primary transition-colors">Pricing</Link>
             <Link to="/#testimonials" className="text-sm font-medium hover:text-primary transition-colors">Testimonials</Link>
             <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">Blog</Link>
-            <Link to="#" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
+            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm" className="hover-glow">Log In</Button>
-            <Button size="sm" className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/30 transition-all">Sign Up</Button>
+            <Button variant="ghost" size="sm" className="hover-glow" asChild>
+              <Link to="/login">Log In</Link>
+            </Button>
+            <Button size="sm" className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/30 transition-all" asChild>
+              <Link to="/signup">Sign Up</Link>
+            </Button>
           </div>
           
           <div className="md:hidden">
@@ -45,14 +49,18 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden pt-4 pb-3 border-t mt-2 border-white/10">
             <div className="flex flex-col space-y-3">
-              <Link to="/#features" className="px-2 py-1 text-sm font-medium hover:text-primary" onClick={toggleMenu}>Services</Link>
+              <Link to="/services" className="px-2 py-1 text-sm font-medium hover:text-primary" onClick={toggleMenu}>Services</Link>
               <Link to="/#pricing" className="px-2 py-1 text-sm font-medium hover:text-primary" onClick={toggleMenu}>Pricing</Link>
               <Link to="/#testimonials" className="px-2 py-1 text-sm font-medium hover:text-primary" onClick={toggleMenu}>Testimonials</Link>
               <Link to="/blog" className="px-2 py-1 text-sm font-medium hover:text-primary" onClick={toggleMenu}>Blog</Link>
-              <Link to="#" className="px-2 py-1 text-sm font-medium hover:text-primary" onClick={toggleMenu}>About</Link>
+              <Link to="/about" className="px-2 py-1 text-sm font-medium hover:text-primary" onClick={toggleMenu}>About</Link>
               <div className="flex space-x-2 pt-2">
-                <Button variant="outline" size="sm" className="flex-1">Log In</Button>
-                <Button size="sm" className="flex-1 bg-gradient-to-r from-primary to-accent">Sign Up</Button>
+                <Button variant="outline" size="sm" className="flex-1" asChild>
+                  <Link to="/login" onClick={toggleMenu}>Log In</Link>
+                </Button>
+                <Button size="sm" className="flex-1 bg-gradient-to-r from-primary to-accent" asChild>
+                  <Link to="/signup" onClick={toggleMenu}>Sign Up</Link>
+                </Button>
               </div>
             </div>
           </div>
