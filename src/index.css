@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 222 47% 98%;
+    --background: 220 40% 98%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -14,11 +14,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221 83% 53%;
+    --primary: 252 94% 64%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 221 83% 94%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 252 94% 95%;
+    --secondary-foreground: 252 94% 25%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -31,9 +31,9 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221 83% 53%;
+    --ring: 252 94% 64%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -46,7 +46,7 @@
   }
 
   .dark {
-    --background: 222.2 47% 10%;
+    --background: 222.2 47% 7%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 47% 10%;
@@ -55,16 +55,16 @@
     --popover: 222.2 47% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 221 83% 60%;
+    --primary: 252 94% 64%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 252 94% 20%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 12 97% 67%;
+    --accent: 335 78% 60%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -72,7 +72,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 221 83% 60%;
+    --ring: 252 94% 64%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -145,5 +145,31 @@
 
   .blog-content code {
     @apply bg-secondary px-1 py-0.5 rounded text-sm;
+  }
+  
+  /* Futuristic components */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg;
+  }
+  
+  .neon-border {
+    @apply relative rounded-xl overflow-hidden;
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.5), 0 0 30px rgba(147, 51, 234, 0.3), 0 0 45px rgba(147, 51, 234, 0.1);
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-sm;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.5), 0 0 30px rgba(147, 51, 234, 0.3);
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 10px rgba(147, 51, 234, 0.7);
   }
 }

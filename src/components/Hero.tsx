@@ -1,49 +1,61 @@
 
 import { Button } from "@/components/ui/button";
+import { Circle, Square, Triangle, Zap } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="pt-28 pb-20 md:pt-36 md:pb-24 overflow-hidden">
+    <section className="pt-28 pb-20 md:pt-36 md:pb-24 overflow-hidden relative">
+      {/* Background animated shapes */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
+      </div>
+      
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-              AI-Powered <span className="gradient-text">Solutions</span> for Every Business
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary text-secondary-foreground mb-4">
+              <Zap className="mr-1 h-3 w-3" />
+              <span>Next generation AI platform</span>
+            </span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+              Future of <span className="gradient-text glow-text">AI</span> is here
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
               Unlock the potential of artificial intelligence with our suite of cutting-edge services designed to transform your business operations.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button size="lg" className="text-white shadow-md">
+              <Button size="lg" className="hover-glow shadow-md">
+                <Zap className="mr-2" />
                 Get Started
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="hover-glow">
                 View Demo
               </Button>
             </div>
             <div className="mt-8 flex items-center text-sm text-muted-foreground">
               <div className="flex -space-x-2 mr-4">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 border-2 border-white" />
+                  <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent border-2 border-white dark:border-gray-900" />
                 ))}
               </div>
               <span>Join 2,000+ companies already growing</span>
             </div>
           </div>
           <div className="w-full lg:w-1/2 pl-0 lg:pl-10">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl blur-3xl"></div>
-              <div className="relative bg-white/50 dark:bg-black/50 backdrop-blur-sm border rounded-xl shadow-xl p-6">
+            <div className="relative neon-border">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl blur-3xl"></div>
+              <div className="relative glass-card p-6">
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { title: "AI Analysis", desc: "Real-time data insights" },
-                    { title: "Content Creation", desc: "AI-powered generation" },
-                    { title: "Process Automation", desc: "Workflow optimization" },
-                    { title: "Predictive Models", desc: "Future-ready planning" }
+                    { title: "AI Analysis", desc: "Real-time data insights", icon: <Circle className="w-5 h-5" /> },
+                    { title: "Content Creation", desc: "AI-powered generation", icon: <Triangle className="w-5 h-5" /> },
+                    { title: "Process Automation", desc: "Workflow optimization", icon: <Square className="w-5 h-5" /> },
+                    { title: "Predictive Models", desc: "Future-ready planning", icon: <Zap className="w-5 h-5" /> }
                   ].map((feature, i) => (
-                    <div key={i} className="p-4 rounded-lg bg-white dark:bg-gray-800 shadow card-hover">
-                      <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center mb-3">
-                        <div className="w-5 h-5 rounded-md bg-gradient-to-br from-violet-600 to-blue-500"></div>
+                    <div key={i} className="p-4 rounded-lg bg-white/5 backdrop-blur-md border border-white/10 hover-glow">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-3">
+                        {feature.icon}
                       </div>
                       <h3 className="font-semibold">{feature.title}</h3>
                       <p className="text-sm text-muted-foreground">{feature.desc}</p>

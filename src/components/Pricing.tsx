@@ -10,6 +10,13 @@ const PricingTier = ({
   features, 
   popular = false,
   buttonVariant = "outline"
+}: {
+  plan: string;
+  price: string;
+  description: string;
+  features: string[];
+  popular?: boolean;
+  buttonVariant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
 }) => {
   return (
     <div className={cn(
