@@ -1,7 +1,7 @@
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/preflight";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
   :root {
@@ -242,3 +242,4 @@
 .read-the-docs {
   color: #888;
 }
+
